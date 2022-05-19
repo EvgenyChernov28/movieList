@@ -1,0 +1,7 @@
+.moviesPage{
+    margin: 30px 100px;
+}
+.movies{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+}
