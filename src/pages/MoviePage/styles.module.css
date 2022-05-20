@@ -1,0 +1,30 @@
+.moviesPage{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.movies{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-width: 1232px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1232px) {
+    .movies {
+        grid-template-columns: 300px 300px 300px;
+        max-width: 932px;
+    }
+}
+
+@media screen and (max-width: 932px) {
+    .movies {
+        grid-template-columns: 300px 300px;
+        max-width: 632px;
+    }
+}
