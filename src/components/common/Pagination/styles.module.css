@@ -1,6 +1,19 @@
 .selectedPage{
     font-weight: bold;
 }
+
 .pagination{
-    margin: 10px;
+    margin: 10px 10px 20px;
+}
+.pagination_element{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20%;
+}
+.pagination_element:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px rgba(201, 201, 201, 0.2);
+}
+.nextprev_button{
+    cursor: pointer;
 }

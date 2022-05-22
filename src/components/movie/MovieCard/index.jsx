@@ -1,14 +1,16 @@
 import React from "react";
+import styles from "./styles.module.css";
 
 const MovieCard = ({ movie, getMovieId }) => {
   return (
-    <div>
+    <div
+      className={styles.movie_card}
+      onClick={() => {
+        getMovieId(movie.id);
+      }}
+    >
       <img src={movie.medium_cover_image} alt="" />
-      <div
-        onClick={() => {
-          getMovieId(movie.id);
-        }}
-      >
+      <div>
         {movie.title}, ({movie.year})
       </div>
       <div>рейтинг: {movie.rating}/10</div>

@@ -27,6 +27,7 @@ const Pagination = ({
     <div className={styles.pagination}>
       {portionNumber > 1 && (
         <button
+          className={styles.nextprev_button}
           onClick={() => {
             setPortionNumber(portionNumber - 1);
             onPageChange((portionNumber - 1) * portionSize);
@@ -44,7 +45,7 @@ const Pagination = ({
             <span
               key={element}
               className={cx(
-                styles.pagination,
+                styles.pagination_element,
                 currentPage === element && styles.selectedPage
               )}
               onClick={() => {
@@ -57,6 +58,7 @@ const Pagination = ({
         })}
       {portionCount > portionNumber && (
         <button
+          className={styles.nextprev_button}
           onClick={() => {
             setPortionNumber(portionNumber + 1);
             onPageChange(portionNumber * portionSize + 1);

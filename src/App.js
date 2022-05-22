@@ -35,24 +35,26 @@ function App() {
       });
       setMovieComments(updateComment);
     }
-
   };
 
   const setDeleteComment = (idComment, movieId) => {
     let updateComment = JSON.parse(JSON.stringify(movieComments));
-
     if (updateComment.find((elem) => elem.movieId === movieId)) {
       updateComment.forEach((element) => {
         if (element.movieId === movieId) {
-          let deletedIndex = element.comments.indexOf(
-            (element) => element.commentId === idComment
+          let deletedIndex
+          element.comments.forEach(
+            (commentsElem, index) => {
+              if(commentsElem.commentId === idComment){
+                deletedIndex = index
+              }
+            }
           );
           element.comments.splice(deletedIndex, 1);
         }
       });
       setMovieComments(updateComment);
     }
-    
   };
 
   return (

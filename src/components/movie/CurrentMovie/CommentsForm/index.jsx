@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.css";
 
 const CommentsForm = ({onNewComment}) => {
   
@@ -7,7 +8,7 @@ const CommentsForm = ({onNewComment}) => {
     onNewComment(event.currentTarget[0].value)
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.comment_form}>
       <label>
         <textarea type="text" name="name" />
       </label>
