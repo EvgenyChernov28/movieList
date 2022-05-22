@@ -17,7 +17,7 @@ function App() {
         );
         if (arr[0].comments.length !== 0) {
           return arr[0].comments[arr[0].comments.length - 1].commentId + 1;
-        }
+        } else return 1;
       } else return 1;
     };
 
