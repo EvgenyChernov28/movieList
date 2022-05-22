@@ -1,7 +1,6 @@
-# Getting Started with Create React App
+# MovieList
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Приложение список фильмов
 ## Available Scripts
 
 In the project directory, you can run:
